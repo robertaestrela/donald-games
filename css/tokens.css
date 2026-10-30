@@ -49,7 +49,7 @@
   --f-ui:"Inter", system-ui, -apple-system, sans-serif;
   --f-call:"Industry", "Sora", sans-serif;
   /* marca · Donald Games (sobrescreve) */
-  --back-top:#5f571e; --back-bottom:#282409; --btn-primary-text:#101112; --btn-primary-bg:#f2dc49; --crew-nobru:#FEE41F; --crew-inhui:#FEE41F; --crew-rainhadonald:#F2DC49;
+  --back-top:#5f571e; --back-bottom:#282409; --btn-primary-text:#101112; --btn-primary-bg:#f2dc49; --crew-nobru:#FEE41F; --crew-inhui:#FEE41F;
 }
 /* estilos de texto do DS */
 .t-d3xl{font:700 64px/1.2 var(--f-display);letter-spacing:-.02em}

@@ -13,7 +13,7 @@ Protótipo mobile do **Donald Games** (redesign *Apple Gamer Style*), fiel ao Fi
 | Poker | Texas Hold'em Sit & Go · 1x1 e mesa de 6 |
 | Sinuca | Bola 8 · 1x1 em mesa 3D (Brasileira em breve) |
 
-**Fluxo:** o app abre no cadastro (boas-vindas → celular → código → senha → apelido), **sem personagem**. A Loja desbloqueia os pacotes de skins (Donald Games (Rei e Rainha do bar Donald), Magia do bar, Reis do baralho); ao embarcar, a aba **Jogos** vira a Home com o vídeo do personagem e as escolhas (avatar, mesa, baralho) passam para todos os jogos.
+**Fluxo:** o app abre no cadastro (boas-vindas → celular → código → senha → apelido), **sem personagem**. A Loja desbloqueia os pacotes de skins (Donald Games (Pato), Magia do bar, Reis do baralho); ao embarcar, a aba **Jogos** vira a Home com o vídeo do personagem e as escolhas (avatar, mesa, baralho) passam para todos os jogos.
 
 **Diamantes:** moeda da Loja, só cosmético (skins, baralhos, molduras, efeitos, troca de nome e de foto) e nunca entra em partida. É o único pagamento dentro do app: o saldo de diamantes fica no topo da Loja e o + abre a página Diamantes (50 +8 · 195 +15 · 960 +40 · 4.500 +100, por R$ 6,90 · 29,90 · 129,90 · 599,90). A confirmação é a tela da App Store / Google Play (no protótipo, uma referência). Pacote de skins = 70 diamantes; sem saldo, o Comprar abre a página Diamantes.
 

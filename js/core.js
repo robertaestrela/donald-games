@@ -13,25 +13,25 @@ const esc = s => String(s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;',
 const prizeOf = (stake, mult = 1.8) => +(stake * mult).toFixed(2);
 
 /* ---------- personagens ---------- */
-const CREW = {engenheiro: 'var(--crew-engenheiro)', comandante: 'var(--crew-comandante)', piloto: 'var(--crew-piloto)', navegador: 'var(--crew-navegador)', explorador: 'var(--crew-explorador)', bar: 'var(--crew-bar)', reis: 'var(--crew-reis)', gamer: 'var(--crew-nobru)', rainhadonald: 'var(--crew-rainhadonald)'};
+const CREW = {engenheiro: 'var(--crew-engenheiro)', comandante: 'var(--crew-comandante)', piloto: 'var(--crew-piloto)', navegador: 'var(--crew-navegador)', explorador: 'var(--crew-explorador)', bar: 'var(--crew-bar)', reis: 'var(--crew-reis)', gamer: 'var(--crew-nobru)'};
 const crewColor = (c, g) => c === 'gamer' ? (g === 'ela' ? 'var(--crew-inhui)' : 'var(--crew-nobru)') : CREW[c] || 'var(--border-strong)';
-const CREW_LABEL = {engenheiro: ['Engenheiro', 'Engenheira'], comandante: ['Comandante', 'Comandante'], piloto: ['Piloto', 'Piloto'], navegador: ['Navegador', 'Navegadora'], explorador: ['Explorador', 'Exploradora'], bar: ['Rei do bar', 'Rainha do bar'], reis: ['Rei do baralho', 'Rainha do baralho'], gamer: ['Rei do bar Donald', 'Rei do bar Donald'], rainhadonald: ['Rainha do bar Donald', 'Rainha do bar Donald']};
+const CREW_LABEL = {engenheiro: ['Engenheiro', 'Engenheira'], comandante: ['Comandante', 'Comandante'], piloto: ['Piloto', 'Piloto'], navegador: ['Navegador', 'Navegadora'], explorador: ['Explorador', 'Exploradora'], bar: ['Rei do bar', 'Rainha do bar'], reis: ['Rei do baralho', 'Rainha do baralho'], gamer: ['Pato', 'Pato']};
 const crewName = (c, g) => c === 'nenhum' ? 'Sem skin' : CREW_LABEL[c][g === 'ela' ? 1 : 0];
 // textos do character-picker (DS)
 const ROLE_SUB = {
   engenheiro: 'DE LANÇAMENTO  ·  Faz qualquer nave decolar.', comandante: 'Mantém a calma em qualquer jogada.', piloto: 'DE VOO  ·  Sempre um passo à frente.',
   navegador: 'ESTELAR  ·  Sempre encontra o caminho.', explorador: 'DE MISSÃO  ·  Vai aonde ninguém foi.',
-  bar: 'Nunca erra a última bola.', reis: 'Sempre tem a carta certa na manga.', gamer: 'O dono do bar · nunca erra a última bola', rainhadonald: 'A rainha do salão · sempre tem a jogada certa'
+  bar: 'Nunca erra a última bola.', reis: 'Sempre tem a carta certa na manga.', gamer: 'O mascote da casa · óculos escuros, corrente de ouro e taco na mão'
 };
 // pacotes de skins da Loja · ordem de prioridade: Nobru & Inhui // Magia do bar // Reis do baralho // Estelar
 const PACKS = {
-  nobru: {name: 'Donald Games', roles: ['gamer', 'rainhadonald'], def: ['gamer', 'ele'], skins: 2, solo: true, caption: 'Rei e Rainha do bar Donald · 2 skins', incl: 'Rei e Rainha do bar Donald', artL: 'pack-nobru', artS: 'pack-nobru', posL: 'center', posS: 'center', mesa: null, page: 'Escolha seu personagem'},
+  nobru: {name: 'Donald Games', roles: ['gamer'], def: ['gamer', 'ele'], skins: 1, solo: true, caption: 'Pato · 1 skin', incl: 'Pato', artL: 'pack-nobru', artS: 'pack-nobru', posL: 'center', posS: 'center', mesa: null, page: 'Escolha seu personagem'},
   magia: {duo: true, name: 'Magia do bar', roles: ['bar'], def: ['bar', 'ele'], skins: 2, caption: 'Rei e Rainha do bar · 2 skins', incl: 'Rei e Rainha do bar', artL: 'pack-magia-l', artS: 'pack-magia-s', posL: 'center 20%', posS: 'center 12%', mesa: 'bar', page: 'Escolha seu personagem'},
   reis: {duo: true, name: 'Reis do baralho', roles: ['reis'], def: ['reis', 'ele'], skins: 2, caption: 'Rei e Rainha do baralho · 2 skins', incl: 'Rei e Rainha do baralho', artL: 'pack-reis-l', artS: 'pack-reis-s', posL: 'center 20%', posS: 'center 12%', mesa: 'reis', page: 'Escolha seu personagem'},
   estelar: {name: 'Estelar', roles: ['engenheiro', 'comandante', 'piloto', 'navegador', 'explorador'], def: ['navegador', 'ela'], skins: 10, caption: 'Tripulação espacial · 10 skins', incl: '5 tripulantes · Ele e Ela', artL: 'pack-estelar', artS: 'pack-estelar', posL: 'center 40%', posS: 'center 30%', mesa: null, page: 'Escolha seu tripulante'}
 };
 const PACK_ORDER = ['nobru', 'magia', 'reis'];
-const packOf = c => ['gamer', 'rainhadonald'].includes(c) ? 'nobru' : c === 'bar' ? 'magia' : c === 'reis' ? 'reis' : 'estelar';
+const packOf = c => c === 'gamer' ? 'nobru' : c === 'bar' ? 'magia' : c === 'reis' ? 'reis' : 'estelar';
 const photo = (crew, g) => crew === 'nenhum' ? A + 'ui/avatar_empty.webp' : `${A}photo/${crew}_${g}.webp`;
 
 /* ---------- jogos ---------- */
